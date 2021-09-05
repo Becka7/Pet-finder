@@ -18,6 +18,8 @@ public class PetformActivity extends AppCompatActivity implements View.OnClickLi
     public static final String TAG = PetformActivity.class.getSimpleName();
     @BindView(R.id.checkout) Button mCheckout;
     @BindView(R.id.nameEditText) EditText mNameEditText;
+    @BindView(R.id.email) EditText mEmail;
+    @BindView(R.id.location) EditText mLocation;
 
 
     @Override
@@ -31,12 +33,23 @@ public class PetformActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View view) {
-//        Toast.makeText(PetformActivity.this, "becka", Toast.LENGTH_SHORT).show();
-        String name = mNameEditText.getText().toString();
-        Intent intent = new Intent( PetformActivity.this, Dogtypes.class);
-        intent.putExtra("name",name);
-        startActivity(intent);
+        if (mNameEditText.length() == 0) {
+            mNameEditText.setError("This field is required");
+        }
 
+        if (mEmail.length() == 0) {
+            mEmail.setError("Email is required");
+        }
 
+        if (mLocation.length() == 0) {
+            mLocation.setError("This field is required");
+        }else {
+
+            String name = mNameEditText.getText().toString();
+            Intent intent = new Intent(PetformActivity.this, Dogtypes.class);
+            intent.putExtra("name", name);
+            startActivity(intent);
+
+        }
     }
 }
