@@ -11,14 +11,22 @@
         android:theme="@style/Theme.Petfinder">
         <activity
             android:name=".PetActivity"
-            android:exported="true" />
+            android:exported="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.moringaschool.petfinder.PetformActivity">
+            </meta-data>
+        </activity>
+
         <activity
             android:name=".PetformActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="true"
-            android:label="@string/title_activity_login" />
+            android:exported="true" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.moringaschool.petfinder.MainActivity">
+        </meta-data>
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
