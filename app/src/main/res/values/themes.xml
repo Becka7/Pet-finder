@@ -14,5 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
+    <style name="NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name ="colorPrimary">@color/black</item>
+    </style>
 </resources>

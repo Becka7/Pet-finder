@@ -17,10 +17,8 @@ public class PetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet);
-        ButterKnife.bind(this);
+//        ButterKnife.bind(this);
 
-//        Intent intent = getIntent();
-//        String name = intent.getStringExtra("name");
-//        mNameTextView.setText("Hey"+name+"here are the pets we chose");
+
     }
 }
