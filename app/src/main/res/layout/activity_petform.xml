@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,45 +14,62 @@
 
     </TextView>
 
-
-    <EditText
-        android:id="@+id/nameEditText"
-        android:layout_width="160dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:hint="Name"
-        android:minHeight="48dp"
-        android:text="">
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="35dp"
+        android:textAlignment="center"
+        android:layout_marginLeft="35dp"
+        app:cardElevation="10dp">
 
-    </EditText>
 
-    <EditText
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:hint="Email"
-        android:minHeight="48dp"
-        android:text="">
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp"
+            android:hint="Location"
+            android:minHeight="48dp"
+            android:text="">
 
-    </EditText>
+        </EditText>
 
-    <EditText
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
-        android:hint="Location"
-        android:minHeight="48dp"
-        android:text="">
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:hint="Email"
+            android:minHeight="48dp"
+            android:text="">
 
-    </EditText>
+        </EditText>
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:hint="Name"
+            android:minHeight="48dp"
+            android:text="">
+
+        </EditText>
+
+
+
+
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/checkout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="checkout pets"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="checkout pets">
 
     </Button>
+
 
 </RelativeLayout>
