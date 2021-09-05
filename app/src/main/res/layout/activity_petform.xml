@@ -10,6 +10,7 @@
         android:text="Registration form"
         android:textAlignment="center"
         android:textSize="40sp"
+        android:textColor="#FF3700B3"
         android:textStyle="bold">
 
     </TextView>

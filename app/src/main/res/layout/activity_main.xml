@@ -23,7 +23,7 @@
         android:fontFamily="@font/aclonica"
         android:text="Meet your new bestfriend "
         android:textAlignment="center"
-        android:textColor="#0E0E0E"
+        android:textColor="#FF3700B3"
         android:textSize="50sp"
         android:textStyle="bold" />
 

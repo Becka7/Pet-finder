@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_dogtypes.xml" value="0.178125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.12" />
         <entry key="app/src/main/res/layout/activity_peform.xml" value="0.12" />
         <entry key="app/src/main/res/layout/activity_pet.xml" value="0.25" />
