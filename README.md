@@ -14,7 +14,9 @@ There are no known bugs at the moment
 
 ## Technologies Used
 * Java
+  
 * XML
+
 *Markdown
 ## Support and contact details
 You can reach me at
