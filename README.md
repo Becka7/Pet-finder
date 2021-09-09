@@ -17,7 +17,7 @@ There are no known bugs at the moment
   
 * XML
 
-*Markdown
+* Markdown
 ## Support and contact details
 You can reach me at
 
