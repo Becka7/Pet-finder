@@ -1,4 +1,4 @@
-# Water-Records
+# Pet_finder
 An Android App that helps users find and select pets to adopt near their location.
 #### By  Rabecca Nzau
 ## Setup/Installation Requirements
