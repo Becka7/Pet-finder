@@ -2,13 +2,9 @@ package com.moringaschool.petfinder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +12,6 @@ import android.widget.Toast;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -40,23 +35,25 @@ public class Dogtypes extends AppCompatActivity  {
 //        mListView.setAdapter(adapter);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(PetAPI.BASE_URL)
+                .baseUrl(Api.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        PetAPI petAPI =retrofit.create(PetAPI.class);
+        Api api = retrofit.create(Api.class);
 
-        Call<List<PetSearchResponse>> call = petAPI.getPets();
+        Call<List<PetSearchResponse>> call = api.getPets();
 
         call.enqueue(new Callback<List<PetSearchResponse>>() {
             @Override
             public void onResponse(Call<List<PetSearchResponse>> call, Response<List<PetSearchResponse>> response) {
-                List<PetSearchResponse> pets =response.body();
-                 String[] petNames = new String[pets.size()];
 
-                 for(int i=0; i<pets.size(); i++){
-                     petNames[i]=pets.get(i).getName();
-                 }
+                List<PetSearchResponse> petSearchResponses = response.body();
+
+                String[] petNames = new String[petSearchResponses.size()];
+
+                for(int i=0;i<petSearchResponses.size();i++){
+                    petNames[i] = petSearchResponses.get(i).getBreedName();
+                }
 
                 listView.setAdapter(
                         new ArrayAdapter<String>(
@@ -65,9 +62,6 @@ public class Dogtypes extends AppCompatActivity  {
                                 petNames
                         )
                 );
-                 for(PetSearchResponse h:pets){
-                     Log.d("name",h.getName());
-                 }
             }
 
             @Override
@@ -76,6 +70,9 @@ public class Dogtypes extends AppCompatActivity  {
 
             }
         });
+
+
+
 
 //        Intent intent = getIntent();
 //        String name = intent.getStringExtra("name");
