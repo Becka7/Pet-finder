@@ -50,6 +50,8 @@ public class PetformActivity extends AppCompatActivity implements View.OnClickLi
             intent.putExtra("name", name);
             startActivity(intent);
 
+//            Toast.makeText(PetformActivity.this, "You are awinner becka...you are strong..you can do this", Toast.LENGTH_SHORT).show();
+
         }
     }
 }
