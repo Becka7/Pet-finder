@@ -46,7 +46,7 @@ public class PetformActivity extends AppCompatActivity implements View.OnClickLi
         }else {
 
             String name = mNameEditText.getText().toString();
-            Intent intent = new Intent(PetformActivity.this, Dogtypes.class);
+            Intent intent = new Intent(PetformActivity.this, DogActivity.class);
             intent.putExtra("name", name);
             startActivity(intent);
 

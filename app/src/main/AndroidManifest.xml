@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Petfinder">
         <activity
+            android:name=".AdoptionActivity"
+            android:exported="true" />
+        <activity
             android:name=".DogActivity"
             android:exported="true" />
         <activity
@@ -19,21 +22,21 @@
             android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.petfinder.PetformActivity"></meta-data>
+                android:value="com.moringaschool.petfinder.PetformActivity" />
         </activity>
         <activity
             android:name=".PetActivity"
             android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.petfinder.Dogtypes"></meta-data>
+                android:value="com.moringaschool.petfinder.Dogtypes" />
         </activity>
         <activity
             android:name=".PetformActivity"
             android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.petfinder.MainActivity"></meta-data>
+                android:value="com.moringaschool.petfinder.MainActivity" />
         </activity>
         <activity
             android:name=".MainActivity"

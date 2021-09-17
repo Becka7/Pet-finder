@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 //        Toast.makeText(MainActivity.this, "Becka", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(MainActivity.this, DogActivity.class);
+        Intent intent = new Intent(MainActivity.this, PetformActivity.class);
         startActivity(intent);
 
     }
