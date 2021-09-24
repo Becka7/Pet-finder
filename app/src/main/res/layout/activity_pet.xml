@@ -5,8 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PetActivity">
+    tools:context=".ui.PetActivity">
 
+
+<!--    <androidx.viewpager.widget.ViewPager-->
+<!--        android:id="@+id/viewPager"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <androidx.viewpager.widget.PagerTabStrip-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/pageHeader"-->
+<!--            android:paddingBottom="4dp"-->
+<!--            android:paddingTop="4dp"/>-->
+
+<!--    </androidx.viewpager.widget.ViewPager>-->
 
 
     <ImageView
@@ -38,7 +52,7 @@
 
 
     <TextView
-        android:id="@+id/description"
+        android:id="@+id/bescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textName"
@@ -50,7 +64,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/description"
+        android:layout_below="@+id/bescription"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:text=" ADOPT" />
