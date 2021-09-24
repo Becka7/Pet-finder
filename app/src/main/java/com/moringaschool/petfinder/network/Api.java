@@ -1,4 +1,6 @@
-package com.moringaschool.petfinder;
+package com.moringaschool.petfinder.network;
+
+import com.moringaschool.petfinder.modules.PetSearchResponse;
 
 import java.util.List;
 
