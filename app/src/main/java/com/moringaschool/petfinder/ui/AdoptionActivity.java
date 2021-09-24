@@ -1,8 +1,10 @@
-package com.moringaschool.petfinder;
+package com.moringaschool.petfinder.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.moringaschool.petfinder.R;
 
 public class AdoptionActivity extends AppCompatActivity {
 

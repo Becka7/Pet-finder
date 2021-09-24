@@ -1,18 +1,23 @@
-package com.moringaschool.petfinder;
+package com.moringaschool.petfinder.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.moringaschool.petfinder.modules.PetSearchResponse;
+import com.moringaschool.petfinder.R;
+import com.moringaschool.petfinder.ui.DogActivity;
+import com.moringaschool.petfinder.ui.MainActivity;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -49,7 +54,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return images.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder{
         @BindView(R.id.cardImage) ImageView mImageView;
         @BindView(R.id.name) TextView mNameTextView;
 
@@ -60,6 +65,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             super(itemView);
             ButterKnife.bind(this, itemView);
             mContext = itemView.getContext();
+            mImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Toast.makeText(mContext, "beckaaa", Toast.LENGTH_SHORT).show();
+                                  }
+            });
+
+
         }
 
         public void bindPets(PetSearchResponse petSearchResponse) {
@@ -67,6 +81,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             Picasso.get().load(petSearchResponse.getImage()).into(mImageView);
 
         }
+
+
+
     }
 }
 
