@@ -1,28 +1,30 @@
 
-package com.moringaschool.petfinder;
+package com.moringaschool.petfinder.modules;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.moringaschool.petfinder.modules.DogInfo;
 
-//@Generated("jsonschema2pojo")
+import org.parceler.Parcel;
+
+@Parcel
 public class PetSearchResponse {
 
     @SerializedName("breedName")
     @Expose
-    private String breedName;
+    String breedName;
     @SerializedName("image")
     @Expose
-    private String image;
+     String image;
     @SerializedName("description")
     @Expose
-    private String description;
+    String description;
     @SerializedName("dogInfo")
     @Expose
-    private DogInfo dogInfo;
+     DogInfo dogInfo;
     @SerializedName("id")
     @Expose
-    private String id;
+     String id;
 
     /**
      * No args constructor for use in serialization
