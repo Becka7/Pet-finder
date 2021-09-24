@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dogtypes">
+    tools:context=".ui.Dogtypes">
 
     <TextView
         android:layout_width="match_parent"
@@ -20,7 +20,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp" />
+        android:layout_marginEnd="-14dp" />
 </RelativeLayout>
