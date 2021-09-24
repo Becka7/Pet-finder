@@ -1,15 +1,18 @@
-package com.moringaschool.petfinder;
+package com.moringaschool.petfinder.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.moringaschool.petfinder.network.Api;
+import com.moringaschool.petfinder.modules.PetSearchResponse;
+import com.moringaschool.petfinder.R;
+import com.moringaschool.petfinder.adapters.Adapter;
 
 import java.util.List;
 
@@ -21,9 +24,10 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class DogActivity extends AppCompatActivity implements View.OnClickListener {
+public class DogActivity extends AppCompatActivity {
 
-    @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
+    @BindView(R.id.recyclerView)
+    RecyclerView mRecyclerView;
 
 
     private Adapter adapter;
@@ -35,7 +39,6 @@ public class DogActivity extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_dog);
         ButterKnife.bind(this);
 
-        mRecyclerView.setOnClickListener(this);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Api.BASE_URL)
@@ -65,11 +68,5 @@ public class DogActivity extends AppCompatActivity implements View.OnClickListen
 
             }
         });
-    }
-
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(DogActivity.this,    PetActivity.class);
-        startActivity(intent);
     }
 }
